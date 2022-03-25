@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frogger</title>
+</head>
+<body>
+    <div id="iframe-container">
+
+        <div id="initial-screen">
+            <h1 id="title">FROGGER!</h1>
+            <h2 id="subtitle">Select your difficult</h2>
+            <button id="easy" class="difficult-button">Easy</button>
+            <button id="normal" class="difficult-button">Normal</button>
+            <button id="hard" class="difficult-button">Hard</button>
+        </div>
+
+        <div id="get-ready-screen">
+            <h1 id="get-ready"></h1>
+        </div>
+
+        <div id="game-screen">            
+            <div id="grid">
+                <!-- row 1 -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="end"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+                <!-- row 2 -->
+                <div class="alligator-left alligator1"></div>
+                <div class="alligator-left alligator2"></div>
+                <div class="alligator-left alligator3"></div>
+                <div class="alligator-left alligator4"></div>
+                <div class="alligator-left alligator5"></div>
+                <div class="alligator-left alligator1"></div>
+                <div class="alligator-left alligator2"></div>
+                <div class="alligator-left alligator3"></div>
+                <div class="alligator-left alligator4"></div>
+
+                <!-- row 3 -->
+                <div class="alligator-right alligator5"></div>
+                <div class="alligator-right alligator1"></div>
+                <div class="alligator-right alligator2"></div>
+                <div class="alligator-right alligator3"></div>
+                <div class="alligator-right alligator4"></div>
+                <div class="alligator-right alligator5"></div>
+                <div class="alligator-right alligator1"></div>
+                <div class="alligator-right alligator2"></div>
+                <div class="alligator-right alligator3"></div>
+
+                <!-- row 4 -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+                <!-- row 5 -->
+                <div class="car-left car1"></div>
+                <div class="car-left car2"></div>
+                <div class="car-left car3"></div>
+                <div class="car-left car1"></div>
+                <div class="car-left car2"></div>
+                <div class="car-left car3"></div>
+                <div class="car-left car1"></div>
+                <div class="car-left car2"></div>
+                <div class="car-left car3"></div>
+
+                <!-- row 6 -->
+                <div class="car-right car1"></div>
+                <div class="car-right car2"></div>
+                <div class="car-right car3"></div>
+                <div class="car-right car1"></div>
+                <div class="car-right car2"></div>
+                <div class="car-right car3"></div>
+                <div class="car-right car1"></div>
+                <div class="car-right car2"></div>
+                <div class="car-right car3"></div>
+
+                <!-- row 7 -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="info">
+                <div id="controls">
+                        <button id="up" class="control-button" onclick="moveFrogByClick('up')">up</button>
+                    <div id="controls-down-row">
+                        <button id="left" class="control-button" onclick="moveFrogByClick('left')">left</button>
+                        <button id="down" class="control-button" onclick="moveFrogByClick('down')">down</button>
+                        <button id="right" class="control-button" onclick="moveFrogByClick('right')">right</button>
+                    </div>
+                </div>
+                <div >
+                    <h1>Time Left</h1>
+                    <h1 id="time-left"></h1>
+                </div>              
+            </div>
+        </div>  
+        
+        <div id="post-game-screen">            
+            <h1 id="time-needed"></h1>
+            <h1 id="message"></h1>
+            <button id="play-again">Play Again!</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
