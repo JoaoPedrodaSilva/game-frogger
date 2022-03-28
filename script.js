@@ -1,3 +1,10 @@
+//preventig scroll screen with keyboard
+window.addEventListener("keydown", function(e) {
+    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+        e.preventDefault();
+    }
+}, false);
+
 const initialScreen = document.querySelector('#initial-screen')
 const getReadyScreen = document.querySelector('#get-ready-screen')
 const gameScreen = document.querySelector('#game-screen')
@@ -78,9 +85,11 @@ const resetInitialParameters = () => {
     rightControlButton.disabled = false
     downControlButton.disabled = false
     leftControlButton.disabled = false
+    messageDisplay.style.color = 'black'
     timeNeeded = 0
     currentTimeLeft = 30
     timeLeftDisplay.innerHTML = currentTimeLeft
+    timeNeededDisplay.innerHTML = null
 }
 
 const moveFrogByClick = (direction) => {
@@ -239,7 +248,8 @@ const checkLose = () => {
         leftControlButton.disabled = true
         gameScreen.style.display = 'none'
         postGameScreen.style.display = 'flex'    
-        messageDisplay.innerHTML = 'Oh no...you lost!'
+        messageDisplay.innerHTML = 'Oh no...you lost!<br>Try again.'
+        messageDisplay.style.color = 'red'
         playAgain()
     }
 }
@@ -254,7 +264,8 @@ const checkWin = () => {
         leftControlButton.disabled = true
         gameScreen.style.display = 'none'
         postGameScreen.style.display = 'flex'    
-        messageDisplay.innerHTML = 'Congrats! You won!'
+        messageDisplay.innerHTML = 'Congrats, you won!<br>Can you do even better?'
+        messageDisplay.style.color = 'blue'
         timeNeededDisplay.innerHTML = `Time needed: ${timeNeeded} seconds`
         playAgain()
     }
