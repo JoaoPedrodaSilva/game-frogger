@@ -1,5 +1,11 @@
-html{    
-    font-size: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
 }
 
 body {
@@ -15,223 +21,200 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 600px;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 475px;
+    max-height: 475px;
     background-color: white;
 }
 
-    #initial-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;        
-        width: 95%;
-        height: 95%;
-    }
-
-        #title {
-            font-size: 4rem;
-        }
-
-        #subtitle {
-            font-size: 2.5rem;
-        }
-
-        .difficult-button {
-            font-size: 4rem;
-            margin: 1%;
-            padding: 5%;
-            width: 50%;
-            height: 20%;
-            border-radius: 10%;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-        }
-
-            #easy {
-                background-color: lightgreen;
-            }
-
-            #normal {
-                background-color: #e4eb1c;
-            }
-
-            #hard {
-                background-color: #d92c21;            
-            }
-
-    #get-ready-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-        #get-ready {
-            font-size: 8rem;
-        }
-
-    #game-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 95%;
-        height: 95%;
-        border: solid 1px;
-    }
-
-        #info {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            border: solid 1px;
-            height: 30%;
-            width: 100%;        
-        }
-
-            #controls {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                height: 95%;
-            }
-
-                #controls-down-row {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .control-button {
-                    width: 30%;
-                    height: 100%;
-                }
-
-            #time-left {
-                text-align: center;
-            }
-
-        #grid {
-            display: flex;
-            flex-wrap: wrap;
-            border: solid 1px;
-            height: 70%;
-            width: 100%;            
-        }
-
-            #grid div {
-                height: 14.5%;
-                width: 11.1%;
-            }     
-                .frog {
-                    background-image: url('img/frog.png') !important;
-                    background-size:cover !important;
-                }
-
-                .end {
-                    background-image: url('img/end.png');
-                    background-size: cover;
-                }   
-                
-                .alligator-left.alligator1, .alligator-left.alligator3 {
-                    background-color: #B5E0F1;
-                    background-image:  url('img/alligator-left.PNG');
-                    background-size: cover;
-                }
-
-                .alligator-right.alligator1, .alligator-right.alligator3 {
-                    background-color: #B5E0F1;
-                    background-image:  url('img/alligator-right.PNG');
-                    background-size: cover;
-                }
-
-                .alligator2, .alligator4, .alligator5 {
-                    background-color: #B5E0F1;
-                }
-
-                .car-left.car1 {
-                    background-color: lightgray;
-                    background-image:  url('img/car-left.PNG');
-                    background-size: cover;
-                }
-
-                .car-right.car1 {
-                    background-color: lightgray;
-                    background-image:  url('img/car-right.png');
-                    background-size: cover;
-                }
-
-                .car2, .car3 {
-                    background-color: lightgray;
-                }  
-
-    #post-game-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 95%;
-        height: 95%;
-    }
-
-        #message, #time-needed {
-            font-size: 3rem;
-            text-align: center;
-        }
-
-        #play-again {
-            font-size: 3rem;
-            margin: 5%;
-            padding: 8%;
-            width: 50%;
-            border-radius: 10%;
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-            background-color: darkslategrey;
-            color: white;
-        }
-
-@media (max-width: 1024px) {
-    #iframe-container {
-        width: 560px;
-        height: 560px;
-    }
-
-    html {
-        font-size: 7px;
-    }
+#initial-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-@media (max-width: 768px) {
-    #iframe-container {
-        width: 420px;
-        height: 420px;
-    }
+#title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
 }
 
-@media (max-width: 576px) {
-    #iframe-container {
-        width: 350px;
-        height: 350px;
-    }
-
-    html {
-        font-size: 6px;
-    }
+#subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-@media (max-width: 425px) {
-    #iframe-container {
-        width: 240px;
-        height: 240px;
-    }
+.difficult-button {
+    font-size: 4rem;
+    margin: 2%;
+    padding: 4%;
+    width: 75%;
+    height: 15%;
+    border-radius: 2rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
 
+#easy {
+    background-color: lightgreen;
+}
+
+#normal {
+    background-color: #e4eb1c;
+}
+
+#hard {
+    background-color: #d92c21;
+}
+
+#get-ready-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#get-ready {
+    font-size: 8rem;
+}
+
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: solid 1px;
+}
+
+#info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 1px;
+    height: 30%;
+    width: 100%;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 95%;
+}
+
+#controls-down-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.control-button {
+    width: 30%;
+    height: 100%;
+}
+
+#time-left {
+    text-align: center;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px;
+    height: 70%;
+    width: 100%;
+}
+
+#grid div {
+    height: 14.5%;
+    width: 11.1%;
+}
+
+.frog {
+    background-image: url('img/frog.png') !important;
+    background-size: cover !important;
+}
+
+.end {
+    background-image: url('img/end.png');
+    background-size: cover;
+}
+
+.alligator-left.alligator1,
+.alligator-left.alligator3 {
+    background-color: #B5E0F1;
+    background-image: url('img/alligator-left.PNG');
+    background-size: cover;
+}
+
+.alligator-right.alligator1,
+.alligator-right.alligator3 {
+    background-color: #B5E0F1;
+    background-image: url('img/alligator-right.PNG');
+    background-size: cover;
+}
+
+.alligator2,
+.alligator4,
+.alligator5 {
+    background-color: #B5E0F1;
+}
+
+.car-left.car1 {
+    background-color: lightgray;
+    background-image: url('img/car-left.PNG');
+    background-size: cover;
+}
+
+.car-right.car1 {
+    background-color: lightgray;
+    background-image: url('img/car-right.png');
+    background-size: cover;
+}
+
+.car2,
+.car3 {
+    background-color: lightgray;
+}
+
+#post-game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#message,
+#time-needed {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#play-again {
+    font-size: 3rem;
+    margin: 5%;
+    padding: 8%;
+    width: 50%;
+    border-radius: 2rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    background-color: darkslategrey;
+    color: white;
+}
+
+@media (max-width: 640px) {
     html {
-        font-size: 4px;
+        font-size: 5px;
     }
 }
